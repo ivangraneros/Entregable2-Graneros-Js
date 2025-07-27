@@ -14,3 +14,6 @@ descripcion.textContent = items.descripcion;
 
 const precio = document.querySelector('.card-text:last-of-type');
 precio.textContent = `Precio: $${items.precio.toLocaleString('es-CL')}`;
+
+const imagen = document.querySelector('.img-fluid');
+imagen.src = items.imagen;

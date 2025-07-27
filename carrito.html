@@ -8,10 +8,11 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
     <!-- css -->
     <link rel="stylesheet" href="css/style.css">
-    <!-- js -->
-    <script src="js/productos.js" defer></script>
-    <script src="js/items.js" defer></script>
-    <script src="js/carrito.js" defer></script>
+    <!-- script js -->
+    <script src="js/carrito.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/productos.js"></script>
+    <script src="js/items.js"></script>
 </head>
 <body>
 
@@ -24,41 +25,21 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-                <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
-                <a class="nav-link active" aria-current="page" href="carrito.html">Carrito</a>
+                <a class="nav-link active" aria-current="page" href="#">Ivan Graneros</a>               
             </div>
             </div>
         </div>
         </nav>
     </header>
-
-<main class="main-producto d-flex justify-content-center">
-    <div class="card-producto card mb-3" style="max-width: 540px;">
-        <div class="row g-0">
-        <div class="col-md-4 d-flex">
-            <img src="..." class="imagen-carta img-fluid w-100 h-100" alt="...">
-        </div>
-        <div class="col-md-8 d-flex align-items-center">
-            <div class="card-body">
-            <h3 class="card-title">Producto</h3>
-            <p class="card-text">Descripción del producto</p>
-            <p class="card-text fw-bold">Precio</p>
-            <a href="carrito.html"><button  `onclick="agregarAlCarrito(${productos.id}, ${productos.nombre}, ${productos.precio})"` class="btn btn-outline-secondary boton-carrito" type="button" id="button-addon1">Agregar al carrito</button></a>
-        </div>
-            
-        </div>
-        </div>
-    </div>
-</main>
-
-
-    <footer>
-        <div class="text-center p-3 text-white">
-            © 2025  100% Deportes 
-        </div>
-    </footer>
-
-            <!-- script bootstrap -->
+    <p>este es tu carrito de compras</p>
+    
+    <section>
+        <ul class="list-group">
+        <li class="list-group-item">item carrito</li>
+        </ul>
+    </section>
+    
+        <!-- script bootstrap -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
 </body>
 </html>
