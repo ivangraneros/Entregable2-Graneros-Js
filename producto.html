@@ -25,6 +25,7 @@
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
                 <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+                <a class="nav-link active" aria-current="page" href="#">Ivan Graneros</a>
                 <a class="nav-link active" aria-current="page" href="carrito.html">Carrito</a>
             </div>
             </div>
@@ -43,9 +44,16 @@
             <h3 class="card-title">Producto</h3>
             <p class="card-text">Descripción del producto</p>
             <p class="card-text fw-bold">Precio</p>
-            <a href="carrito.html"><button  `onclick="agregarAlCarrito(${productos.id}, ${productos.nombre}, ${productos.precio})"` class="btn btn-outline-secondary boton-carrito" type="button" id="button-addon1">Agregar al carrito</button></a>
-        </div>
-            
+            <button 
+            class="agregar-carrito btn btn-outline-secondary"
+            data-id="id"
+            data-nombre="nombre"
+            data-precio="precio"
+            data-imagen="imagen">
+            Agregar al carrito
+            </button>
+
+        </div>          
         </div>
         </div>
     </div>
