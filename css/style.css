@@ -58,16 +58,7 @@ main {
 
 
 
-        /* Buscador */
-
-.input-group {
-  max-width: 600px;
-  margin: 2rem auto;
-}
-
-.form-control {
-  border-radius: 0 0.375rem 0.375rem 0;
-}
+        /* Botones productos  */
 
 .btn-outline-secondary {
   border-color: #ff6f00;
@@ -188,4 +179,54 @@ footer {
   margin-bottom: 0.3rem;
 }
 
+.btn-outline-secondary {
+  border-color: #ff6f00;
+  color: #ff6f00;
+}
 
+.btn-outline-secondary:hover {
+  background-color: #ff6f00;
+  color: white;
+}
+
+
+      /* pagina carrito */
+
+.section-carrito {
+  padding: 20px;
+  margin-left: 30px;
+}
+
+.boton-carrito {
+  background-color: #ff6f00;
+  text-decoration: none;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+}
+
+.link-volver {
+  text-decoration: none;
+  color: #ff6f00;
+  padding: 0.6rem 1rem;
+  margin-left: 20px;
+  border: 1px solid #ff6f00;
+  border-radius: 6px;
+  transition: background-color 0.3s, color 0.3s; 
+}
+
+.link-volver:hover {
+  color: #fff;
+  background-color: #ff6f00;
+}
+
+
+      /* toast */
+      
+.mensaje-toast {
+  padding: 15px;
+  margin-bottom: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}

@@ -20,13 +20,18 @@ function mostrarCarrito() {
     sumaTotal += producto.precio * producto.cantidad;
 
     const div = document.createElement("div");
-    div.innerHTML = `
-      <h3>${producto.nombre}</h3>
-      <p>Precio: $${producto.precio}</p>
-      <p>Cantidad: ${producto.cantidad}</p>
-      <button onclick="eliminarProducto(${index})">Eliminar</button>
-      <hr>
-    `;
+    div.innerHTML = ` 
+    <div class="card-carrito w-75 mb-3">
+      <div class="card-body-carrito">
+        <h5 class="card-title-carrito">${producto.nombre}</h5>
+        <p class="card-text-carrito">Precio: $${producto.precio}</p>
+        <p class="card-text-carrito">Cantidad: ${producto.cantidad}</p>
+        <a href="#" class="boton-carrito" onclick="eliminarProducto(${index})">Eliminar</a>
+      </div> 
+    </div>
+    <hr>`
+    ;
+
     contenedor.appendChild(div);
   });
 
@@ -44,3 +49,4 @@ function vaciarCarrito() {
   localStorage.removeItem("carrito");
   mostrarCarrito();
 }
+

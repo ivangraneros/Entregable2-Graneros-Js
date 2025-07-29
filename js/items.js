@@ -19,7 +19,6 @@ const imagen = document.querySelector('.img-fluid');
 imagen.src = items.imagen;
 
 
-
 document.addEventListener("DOMContentLoaded", () => {
   const boton = document.querySelector(".agregar-carrito");
 
@@ -37,7 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
         imagen: boton.dataset.imagen,
         cantidad: 1
     };
-
+   
     let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
     const existe = carrito.find(p => p.id === producto.id);
@@ -48,6 +47,16 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     localStorage.setItem("carrito", JSON.stringify(carrito));
-    alert(`${producto.nombre} fue agregado al carrito`);
+
+    
+// Mostrar mensaje de agregado al carrito
+const toastMensaje = document.querySelector('.toastCarrito');
+toastMensaje.querySelector('.toast-body').textContent = `${producto.nombre} fue agregado al carrito ✅`;
+const toast = new bootstrap.Toast(toastMensaje);
+toast.show();
+  
   });
 });
+
+
+
