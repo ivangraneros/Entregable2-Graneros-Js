@@ -1,7 +1,3 @@
-document.addEventListener("DOMContentLoaded", () => {
-  mostrarCarrito();
-});
-
 function mostrarCarrito() {
   const contenedor = document.querySelector(".contenedor-carrito");
   const total = document.querySelector(".total");
@@ -49,4 +45,6 @@ function vaciarCarrito() {
   localStorage.removeItem("carrito");
   mostrarCarrito();
 }
+
+mostrarCarrito();
 

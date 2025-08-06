@@ -47,14 +47,31 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     localStorage.setItem("carrito", JSON.stringify(carrito));
-
-    
-// Mostrar mensaje de agregado al carrito
-const toastMensaje = document.querySelector('.toastCarrito');
-toastMensaje.querySelector('.toast-body').textContent = `${producto.nombre} fue agregado al carrito ✅`;
-const toast = new bootstrap.Toast(toastMensaje);
-toast.show();
   
+  });
+
+  // Toastify
+
+  document.querySelector(".boton-agregar").addEventListener("click", () => {
+
+  Toastify({
+
+    text: "Producto agregrado al carrito ✅",
+    duration: 3000,
+    gravity: "top",
+    position: "right",
+      style: {
+    background: "linear-gradient(to right, #00b09b, #96c93d)",
+    color: "white",
+    fontWeight: "bold",
+    padding: "20px",
+    borderRadius: "5px",
+    marginTop: "60px",
+    boxShadow: "0 2px 10px rgba(0, 0, 0, 0.3)",
+  }
+
+  }).showToast();
+
   });
 });
 
