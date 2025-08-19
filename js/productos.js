@@ -1,4 +1,4 @@
-const productos = [
+/*const productos = [
     {
         id: 1,
         nombre: "Camiseta de Futbol",
@@ -35,3 +35,7 @@ const productos = [
         imagen: "./media/guante_futbol.avif",
     },
 ]
+*/
+
+
+// podria borrar este archivo pero lo dejo por las dudas, pero ya lo reemplace por el fetch de productos de mockApi

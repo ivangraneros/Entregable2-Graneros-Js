@@ -2,36 +2,41 @@ const params = new URLSearchParams(window.location.search);
 const productoId = params.get('id');
 
 
-const items = productos.find((item) => item.id === Number(productoId));
+// (dejo esto por las dudas pero ya no se usa)
+/*const items = productos.find((item) => item.id === Number(productoId));*/
+
+
+// fetch para la card de producto
+
+fetch(`https://68a3aa7ec123272fb9b02a07.mockapi.io/products/${productoId}`)
+.then(response => response.json())
+.then(item => {
 
 const titulo = document.querySelector('h3');
-
-titulo.textContent = items.nombre;
+titulo.textContent = item.name;
 
 const descripcion = document.querySelector('.card-text');
-
-descripcion.textContent = items.descripcion;
+descripcion.textContent = item.description;
 
 const precio = document.querySelector('.card-text:last-of-type');
-precio.textContent = `Precio: $${items.precio.toLocaleString('es-CL')}`;
+precio.textContent = `Precio: $${item.precio.toLocaleString('es-CL')}`;
 
 const imagen = document.querySelector('.img-fluid');
-imagen.src = items.imagen;
+imagen.src = item.imagen;
 
 
-document.addEventListener("DOMContentLoaded", () => {
+
   const boton = document.querySelector(".agregar-carrito");
-
-  boton.dataset.id = items.id;
-  boton.dataset.nombre = items.nombre;
-  boton.dataset.precio = items.precio;
-  boton.dataset.imagen = items.imagen;
+  boton.dataset.id = item.id;
+  boton.dataset.name = item.name;
+  boton.dataset.precio = item.precio;
+  boton.dataset.imagen = item.imagen;
 
 
   boton.addEventListener("click", () => {
     const producto = {
         id: boton.dataset.id,
-        nombre: boton.dataset.nombre,
+        nombre: boton.dataset.name,
         precio: boton.dataset.precio,
         imagen: boton.dataset.imagen,
         cantidad: 1
@@ -48,7 +53,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
     localStorage.setItem("carrito", JSON.stringify(carrito));
   
-  });
+    })
+  })
+
+  .catch(error => console.error(error));
+
 
   // Toastify
 
@@ -73,7 +82,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }).showToast();
 
   });
-});
+
 
 
 
